@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phones on Sale</title>
+<h1><b>The Phones on sale</b></h1>
+<style>
+body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+map {
+            display: block;
+        }
+
+        area {
+            outline: none;
+            cursor: pointer;
+        }
+</style>
+</head>
+<body>
+    <img src="C:\Users\LENOVO\Pictures\phone1.webp" alt="Image 1" usemap="#workmap1" width="300" height="400">
+    <map name="workmap1">
+        <area shape="rect" coords="10,20,300,400" alt="Phone1" onclick="phone1()">
+    </map>
+
+    <img src="C:\Users\LENOVO\Pictures\phone2.webp" alt="Image 2" usemap="#workmap2" width="300" height="400">
+    <map name="workmap2">
+        <area shape="rect" coords="10,20,300,400" alt="Phone2" onclick="phone2()">
+    </map>
+
+    <img src="C:\Users\LENOVO\Pictures\phone3.webp" alt="Image 3" usemap="#workmap3" width="300" height="400">
+    <map name="workmap3">
+        <area shape="rect" coords="10,20,300,400" alt="Phone3" onclick="phone3()">
+    </map>
+
+    <img src="C:\Users\LENOVO\Pictures\phone4.webp" alt="Image 4" usemap="#workmap4" width="300" height="400">
+    <map name="workmap4">
+        <area shape="rect" coords="10,20,300,400" alt="Phone4" onclick="phone4()">
+    </map>
+
+    <img src="C:\Users\LENOVO\Pictures\phone5.webp" alt="Image 5" usemap="#workmap5" width="300" height="400">
+    <map name="workmap5">
+        <area shape="rect" coords="10,20,300,400" alt="Phone5" onclick="phone5()">
+    </map>
+
+    <div id="demo"></div>
+
+    <script>
+        function phone1() {
+            let phone1 = {
+                name: "Galaxy F04 (4GB RAM)",
+                companyname: "Samsung",
+                ram: "4GB",
+                memory: "64GB",
+                Price: "₹8499",
+                processor: "MediaTek Helio P35 Processor"
+            };
+            document.getElementById("demo").innerHTML = JSON.stringify(phone1);
+        }
+
+        function phone2() {
+            let phone2 = {
+                name: "Galaxy A04s (4GB RAM)",
+                companyname: "Samsung",
+                ram: "4GB",
+                memory: "64GB",
+                Price: "₹12499",
+                processor: "MediaTek Helio P35 Processor"
+            };
+            document.getElementById("demo").innerHTML = JSON.stringify(phone2);
+        }
+
+        function phone3() {
+            let phone3 = {
+                name: "Galaxy F14 5G (4GB RAM)",
+                companyname: "Samsung",
+                ram: "4GB",
+                memory: "64GB",
+                Price: "₹13990",
+                processor: "Frevolution Performance with Samsung Exynos 1330 5nm Processor"
+            };
+            document.getElementById("demo").innerHTML = JSON.stringify(phone3);
+        }
+
+        function phone4() {
+            let phone4 = {
+                name: "Galaxy F13",
+                companyname: "Samsung",
+                ram: "4GB",
+                memory: "128GB",
+                Price: "₹14990",
+                processor: "Exynos 1330, Octa Core Processor"
+            };
+            document.getElementById("demo").innerHTML = JSON.stringify(phone4);
+        }
+
+        function phone5() {
+            let phone5 = {
+                name: "Galaxy A14 5G (4GB RAM)",
+                companyname: "Samsung",
+                ram: "4GB",
+                memory: "64GB",
+                Price: "₹12499",
+                processor: "Exynos 1330 (5nm) - SM-A146B Mediatek MT6833"
+            };
+            document.getElementById("demo").innerHTML = JSON.stringify(phone5);
+        }
+    </script>
+</body>
+</html>

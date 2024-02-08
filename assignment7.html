@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Time</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .timer {
+            font-size: 24px;
+        }
+        .world-time {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>World Time</h1>
+    
+    <div class="timer">
+        <p>Current Time:</p>
+        <p id="current-time"></p>
+    </div>
+    
+    <div class="world-time">
+        <p>World Times:</p>
+        <ul id="world-times">
+        </ul>
+    </div>
+
+    <script>
+        function updateTime() {
+            const currentTime = new Date();
+            const currentElement = document.getElementById('current-time');
+            currentElement.textContent = currentTime.toLocaleTimeString();
+
+            const timeZones = ['America/New_York', 'Europe/London', 'Asia/Tokyo'];
+            const worldTimesElement = document.getElementById('world-times');
+            worldTimesElement.innerHTML = '';
+
+            timeZones.forEach(function(timeZone) {
+                const cityTime = new Date().toLocaleTimeString('en-US', { timeZone });
+                const listItem = document.createElement('li');
+                listItem.textContent = timeZone + ': ' + cityTime;
+                worldTimesElement.appendChild(listItem);
+            });
+        }
+
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+</html>

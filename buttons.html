@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Buttons of colors</title>
+<style>
+    .button {
+        padding: 10px 20px;
+        margin: 5px;
+        cursor: pointer;
+        border: none;
+        font-size: 16px;
+    }
+    
+    .button1 { background-color: Magenta; }
+    .button2 { background-color: SkyBlue; }
+    .button3 { background-color: Olive; }
+    .button4 { background-color: Silver; }
+    .button5 { background-color: Red; }
+    .button6 { background-color: Indigo; }
+    .button7 { background-color: MediumSeaGreen; }
+</style>
+</head>
+<body>
+    <section>
+        <ol>
+            <b>Instructions:</b>
+            <li>please click one of the given buttons</li>
+            <li>the colored text of the corresponding colors appears</li>
+        </ol>
+    </section>
+    <p><button class="button button1" onclick="func('Magenta')">Magenta</button></p>
+    <p><button class="button button2" onclick="func('SkyBlue')">SkyBlue</button></p>
+    <p><button class="button button3" onclick="func('Olive')">Olive</button></p>
+    <p><button class="button button4" onclick="func('Silver')">Silver</button></p>
+    <p><button class="button button5" onclick="func('Red')">Red</button></p>
+    <p><button class="button button6" onclick="func('Indigo')">Indigo</button></p>
+    <p><button class="button button7" onclick="func('MediumSeaGreen')">MediumSeaGreen</button></p>
+    
+    <h1><b>The color chosen: </b></h1>
+    
+    <!-- Use separate elements to display color names -->
+    <div>
+        <p id="colors"></p>
+    </div>
+    
+    <div>
+        <h1>These are the colors</h1>
+        <ul>
+            <li>Magenta</li>
+            <li>SkyBlue</li>
+            <li>Olive</li>
+            <li>Silver</li>
+            <li>Red</li>
+            <li>Indigo</li>
+            <li>MediumSeaGreen</li>
+        </ul>
+    </div>
+    
+    <section>
+        <button onclick="scroll()">Scroll the page</button>
+        <script>
+            function func(color) {
+                document.getElementById("colors").textContent = color;
+            }
+            
+            function scroll() {
+                window.scrollBy(0, 100);
+            }
+        </script>
+    </section>
+</body>
+</html>
